@@ -1,0 +1,11 @@
+npx postgraphile \
+    -c postgres://public_postgraphile:postgres@localhost:5433/postgres \
+    --schema public \
+    --append-plugins @graphile-contrib/pg-simplify-inflector,postgraphile-plugin-connection-filter \
+    --enhance-graphiql \
+    --allow-explain \
+    --watch \
+    --owner-connection postgres://postgres:postgres@localhost:5433/postgres \
+    --default-role public_anonymous \
+    --jwt-token-identifier public.jwt \
+    --jwt-secret jwt_secret \

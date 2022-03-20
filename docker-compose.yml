@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  quiz_db:
+    hostname: quiz_db
+    container_name: quiz_db
+    image: postgres:14.1
+    environment:
+      POSTGRES_DB: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_USER: "postgres"
+      PGPORT: 5432
+    ports:
+      - "5433:5432"

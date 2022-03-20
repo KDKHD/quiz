@@ -1,0 +1,1 @@
+DROP FUNCTION "public".new_quiz_run (int);

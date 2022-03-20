@@ -1,0 +1,1 @@
+DROP FUNCTION "private".set_user_id ();
