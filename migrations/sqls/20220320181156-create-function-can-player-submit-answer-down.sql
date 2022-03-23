@@ -1,0 +1,1 @@
+DROP FUNCTION "private".can_player_sublit_score();

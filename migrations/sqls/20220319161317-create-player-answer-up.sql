@@ -16,10 +16,12 @@ ALTER TABLE "player_answer" ADD FOREIGN KEY ("question_id") REFERENCES "question
 
 ALTER TABLE "player_answer" ADD FOREIGN KEY ("answer_id") REFERENCES "answer" ("answer_id");
 
+CREATE UNIQUE INDEX ON "player_answer" ("player_id", "question_id");
+
 CREATE TRIGGER player_answer_player_id
     BEFORE INSERT ON "player_answer"
     FOR EACH ROW
     EXECUTE PROCEDURE "private".set_player_id();
 
-GRANT ALL privileges ON TABLE "public"."quiz" TO public_player;
+GRANT ALL privileges ON TABLE "public"."player_answer" TO public_player;
 GRANT USAGE, SELECT ON SEQUENCE player_answer_player_answers_id_seq TO public_player;

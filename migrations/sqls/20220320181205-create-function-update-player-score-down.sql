@@ -1,0 +1,1 @@
+DROP FUNCTION "private".update_player_score ()

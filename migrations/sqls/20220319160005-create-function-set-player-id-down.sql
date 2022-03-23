@@ -1,1 +1,1 @@
-/* Replace with your SQL commands */
+DROP FUNCTION "private".set_player_id ()

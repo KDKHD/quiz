@@ -9,4 +9,6 @@ COMMENT ON TABLE "quiz_run" IS '@omit create,delete';
 
 ALTER TABLE "quiz_run" ADD FOREIGN KEY ("quiz_id") REFERENCES "quiz" ("quiz_id");
 
-GRANT INSERT ON TABLE "public"."quiz_run" TO public_user;
+GRANT SELECT ON TABLE "public"."quiz_run" TO public_user;
+GRANT SELECT ON TABLE "public"."quiz_run" TO public_player;
+

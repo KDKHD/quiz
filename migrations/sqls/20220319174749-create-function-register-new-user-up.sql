@@ -38,3 +38,5 @@ $$
 LANGUAGE plpgsql
 STRICT
 SECURITY DEFINER;
+
+GRANT EXECUTE ON FUNCTION "public".register_new_user (varchar, varchar, varchar, varchar) TO public_anonymous;

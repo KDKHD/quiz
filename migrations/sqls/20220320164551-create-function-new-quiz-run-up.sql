@@ -10,7 +10,7 @@ BEGIN
         RAISE 'Quiz % does not exist', new_quiz_run.quiz_id;
     END IF;
 
-    IF quiz.user_id != current_setting ('jwt.claims.user_id') THEN
+    IF quiz.user_id != current_setting ('jwt.claims.user_id')::integer THEN
         RAISE 'You do not have access to quiz %', new_quiz_run.quiz_id;
     END IF;
 
@@ -28,3 +28,5 @@ $$
 LANGUAGE plpgsql
 STRICT
 SECURITY DEFINER;
+
+GRANT EXECUTE ON FUNCTION "public".new_quiz_run (int) TO public_user;

@@ -26,4 +26,6 @@ CREATE POLICY delete_user ON "public"."user" FOR DELETE TO public_user USING
 CREATE POLICY insert_user ON "public"."user" FOR INSERT TO public_user WITH CHECK 
     (user_id = nullif (current_setting ('jwt.claims.user_id', TRUE), '')::integer);
 
-GRANT ALL PRIVILEGES ON TABLE "public"."user" TO public_user;
+
+
+    

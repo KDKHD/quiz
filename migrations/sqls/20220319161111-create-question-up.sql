@@ -43,4 +43,5 @@ CREATE POLICY insert_question ON "public"."question" FOR INSERT TO public_user W
             ));
 
 GRANT ALL privileges ON TABLE "public"."question" TO public_user;
+GRANT SELECT ON TABLE "public"."question" TO public_player;
 GRANT USAGE, SELECT ON SEQUENCE question_question_id_seq TO public_user;

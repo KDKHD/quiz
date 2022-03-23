@@ -22,3 +22,5 @@ $$
 LANGUAGE plpgsql
 STRICT
 SECURITY DEFINER;
+
+GRANT EXECUTE ON FUNCTION "public".authenticate (varchar, varchar) TO public_anonymous, public_user;

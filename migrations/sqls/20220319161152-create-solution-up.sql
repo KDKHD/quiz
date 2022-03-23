@@ -12,3 +12,4 @@ ALTER TABLE "solution" ADD FOREIGN KEY ("answer_id") REFERENCES "answer" ("answe
 GRANT ALL privileges ON TABLE "public"."solution" TO public_user;
 GRANT USAGE, SELECT ON SEQUENCE solution_solution_id_seq TO public_user;
 
+
