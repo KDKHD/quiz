@@ -5,7 +5,7 @@ Quiz app similar to kahoot using postgraphile. WIP
 ```
 mutation registerNewUser {
   registerNewUser(
-    input: {email: "kenneth@blue3.dch", firstName: "Kenneth", lastName: "K", password: "SecureForFun123"}
+    input: {email: "kenneth@blue3.dch", firstName: "Kenneth", lastName: "K", password: "SecurePass"}
   ) {
     newUser {
       token
@@ -20,7 +20,7 @@ mutation registerNewUser {
 }
 
 mutation authenticate {
-  authenticate(input: {email: "kenneth@blue3.dch", password: "SecureForFun123"}) {
+  authenticate(input: {email: "kenneth@blue3.dch", password: "SecurePass"}) {
     jwt
   }
 }
