@@ -1,5 +1,7 @@
 ### Example Queries
 
+Quiz app similar to kahoot using postgraphile. WIP
+
 ```
 mutation registerNewUser {
   registerNewUser(
