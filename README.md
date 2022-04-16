@@ -1,6 +1,6 @@
 ### Example Queries
 
-Quiz app similar to kahoot using postgraphile. WIP
+Graphql quiz app similar to kahoot using postgraphile. WIP
 
 ```
 mutation registerNewUser {
